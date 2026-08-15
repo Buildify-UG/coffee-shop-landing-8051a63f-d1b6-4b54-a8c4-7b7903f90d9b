@@ -1,6 +1,27 @@
-import { Coffee, Clock, MapPin, Phone, Mail, Star, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Coffee, Clock, MapPin, Phone, Mail, Star, Facebook, Instagram, Twitter, Linkedin, Moon, Sun } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    if (!isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
   const menuItems = [
     { category: 'Espresso', items: [
       { name: 'Espresso', price: '$2.50' },
@@ -30,6 +51,27 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation Bar */}
+      <nav className="bg-card border-b border-border sticky top-0 z-50 shadow-md">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Coffee className="w-6 h-6 text-primary" />
+            <span className="text-lg font-bold text-foreground">Brew Haven</span>
+          </div>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-lg bg-muted hover:bg-accent transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {isDark ? (
+              <Sun className="w-5 h-5 text-foreground" />
+            ) : (
+              <Moon className="w-5 h-5 text-foreground" />
+            )}
+          </button>
+        </div>
+      </nav>
+
       {/* Header/Hero */}
       <header 
         className="relative h-96 bg-cover bg-center flex items-center justify-center"
