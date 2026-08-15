@@ -91,7 +91,7 @@ const Index = () => {
       </header>
 
       {/* Quick Info Bar */}
-      <div className="bg-amber-700 text-white py-4">
+      <div className="bg-primary text-primary-foreground py-4">
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-8">
           <div className="flex items-center gap-2">
             <MapPin className="w-5 h-5" />
@@ -109,18 +109,18 @@ const Index = () => {
       </div>
 
       {/* Menu Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Our Menu</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {menuItems.map((section) => (
-              <div key={section.category} className="bg-amber-50 rounded-lg p-8 border border-amber-200">
-                <h3 className="text-2xl font-bold mb-6 text-amber-900">{section.category}</h3>
+              <div key={section.category} className="bg-card rounded-lg p-8 border border-border">
+                <h3 className="text-2xl font-bold mb-6 text-primary">{section.category}</h3>
                 <div className="space-y-4">
                   {section.items.map((item) => (
-                    <div key={item.name} className="flex justify-between items-center pb-3 border-b border-amber-100">
+                    <div key={item.name} className="flex justify-between items-center pb-3 border-b border-border">
                       <span className="text-foreground font-medium">{item.name}</span>
-                      <span className="text-amber-700 font-semibold">{item.price}</span>
+                      <span className="text-primary font-semibold">{item.price}</span>
                     </div>
                   ))}
                 </div>
@@ -131,14 +131,14 @@ const Index = () => {
       </section>
 
       {/* Hours Section */}
-      <section className="py-16 px-4 bg-amber-50">
+      <section className="py-16 px-4 bg-secondary">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Hours of Operation</h2>
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto border border-amber-200">
+          <div className="bg-card rounded-lg shadow-lg p-8 max-w-2xl mx-auto border border-border">
             <div className="space-y-6">
               {hours.map((schedule) => (
                 <div key={schedule.day} className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
+                  <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground text-lg">{schedule.day}</p>
                     <p className="text-muted-foreground">{schedule.time}</p>
@@ -151,28 +151,28 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Get in Touch</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex gap-4">
-                <MapPin className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
                   <p className="text-muted-foreground">123 Coffee Street<br />Brew City, BC 12345</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <Phone className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+                <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
                   <p className="text-muted-foreground">(555) 123-4567</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <Mail className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" />
+                <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
                   <p className="text-muted-foreground">hello@brewhaven.com</p>
@@ -181,23 +181,23 @@ const Index = () => {
             </div>
 
             {/* Quick Message */}
-            <div className="bg-amber-50 rounded-lg p-8 border border-amber-200">
+            <div className="bg-card rounded-lg p-8 border border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground">Why Choose Us?</h3>
               <ul className="space-y-3">
                 <li className="flex gap-2">
-                  <Star className="w-5 h-5 text-amber-700 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-muted-foreground">Freshly roasted beans daily</span>
                 </li>
                 <li className="flex gap-2">
-                  <Star className="w-5 h-5 text-amber-700 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-muted-foreground">Expert baristas crafting every cup</span>
                 </li>
                 <li className="flex gap-2">
-                  <Star className="w-5 h-5 text-amber-700 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-muted-foreground">Cozy atmosphere perfect for work or relaxation</span>
                 </li>
                 <li className="flex gap-2">
-                  <Star className="w-5 h-5 text-amber-700 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-muted-foreground">Free WiFi and plenty of seating</span>
                 </li>
               </ul>
@@ -207,24 +207,24 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-white py-8 px-4">
+      <footer className="bg-secondary text-secondary-foreground py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <p className="mb-2">&copy; 2024 Brew Haven. All rights reserved.</p>
-          <p className="text-amber-100">Crafted with ❤️ for coffee lovers</p>
+          <p className="text-secondary-foreground/80">Crafted with ❤️ for coffee lovers</p>
           
           {/* Social Media Links */}
           <div className="flex gap-4 justify-center mt-6">
-            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
-              <Facebook className="w-5 h-5 text-white" />
+            <a href="#" className="bg-primary hover:bg-primary/90 p-3 rounded-full transition-colors">
+              <Facebook className="w-5 h-5 text-primary-foreground" />
             </a>
-            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
-              <Instagram className="w-5 h-5 text-white" />
+            <a href="#" className="bg-primary hover:bg-primary/90 p-3 rounded-full transition-colors">
+              <Instagram className="w-5 h-5 text-primary-foreground" />
             </a>
-            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
-              <Twitter className="w-5 h-5 text-white" />
+            <a href="#" className="bg-primary hover:bg-primary/90 p-3 rounded-full transition-colors">
+              <Twitter className="w-5 h-5 text-primary-foreground" />
             </a>
-            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
-              <Linkedin className="w-5 h-5 text-white" />
+            <a href="#" className="bg-primary hover:bg-primary/90 p-3 rounded-full transition-colors">
+              <Linkedin className="w-5 h-5 text-primary-foreground" />
             </a>
           </div>
         </div>
