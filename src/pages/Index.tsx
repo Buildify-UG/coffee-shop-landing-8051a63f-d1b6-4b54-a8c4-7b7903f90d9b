@@ -1,4 +1,4 @@
-import { Coffee, Clock, MapPin, Phone, Mail, Star } from 'lucide-react';
+import { Coffee, Clock, MapPin, Phone, Mail, Star, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Index = () => {
   const menuItems = [
@@ -169,6 +169,22 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-center">
           <p className="mb-2">&copy; 2024 Brew Haven. All rights reserved.</p>
           <p className="text-amber-100">Crafted with ❤️ for coffee lovers</p>
+          
+          {/* Social Media Links */}
+          <div className="flex gap-4 justify-center mt-6">
+            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
+              <Facebook className="w-5 h-5 text-white" />
+            </a>
+            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
+              <Instagram className="w-5 h-5 text-white" />
+            </a>
+            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
+              <Twitter className="w-5 h-5 text-white" />
+            </a>
+            <a href="#" className="bg-amber-600 hover:bg-amber-700 p-3 rounded-full transition-colors">
+              <Linkedin className="w-5 h-5 text-white" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
