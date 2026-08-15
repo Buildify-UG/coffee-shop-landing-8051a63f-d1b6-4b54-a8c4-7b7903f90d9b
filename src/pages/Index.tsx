@@ -80,19 +80,19 @@ const Index = () => {
 
       {/* Header/Hero */}
       <header 
-        className="relative h-96 bg-cover bg-center flex items-center justify-center"
+        className="relative h-screen bg-cover bg-center flex items-center justify-center"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1495474472645-4d71bcdd2085?w=1920&h=800&fit=crop)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1495474472645-4d71bcdd2085?w=1920&h=1080&fit=crop)',
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white">
-          <div className="flex items-center justify-center mb-4">
-            <Coffee className="w-12 h-12" />
+          <div className="flex items-center justify-center mb-6">
+            <Coffee className="w-20 h-20" />
           </div>
-          <h1 className="text-5xl font-bold mb-2">Brew Haven</h1>
-          <p className="text-xl opacity-90">Artisan Coffee & Cozy Vibes</p>
+          <h1 className="text-8xl font-bold mb-4 tracking-tight">Brew Haven</h1>
+          <p className="text-3xl opacity-90">Artisan Coffee & Cozy Vibes</p>
         </div>
       </header>
 
