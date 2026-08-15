@@ -49,6 +49,12 @@ const Index = () => {
     { day: 'Sunday', time: '8:00 AM - 7:00 PM' },
   ];
 
+  const testimonials = [
+    { name: 'Sarah Johnson', role: 'Regular Customer', text: 'The best coffee in town! The atmosphere is cozy and the baristas are incredibly skilled. I\'ve been coming here for 2 years.' },
+    { name: 'Mike Chen', role: 'Remote Worker', text: 'Perfect spot to work. Great WiFi, comfortable seating, and amazing coffee keeps me productive all day.' },
+    { name: 'Emma Davis', role: 'Coffee Enthusiast', text: 'Their single-origin beans are exceptional. Every cup is a journey. Highly recommend the Ethiopian blend!' },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Bar */}
@@ -202,6 +208,29 @@ const Index = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 bg-secondary">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">What Our Customers Say</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="bg-card rounded-lg p-8 border border-border shadow-lg">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-6 italic">"{testimonial.text}"</p>
+                <div>
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-muted-foreground text-sm">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
